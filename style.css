@@ -1,0 +1,301 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Gabarito", serif;
+  font-size: 20px;
+}
+
+/*Overall all Nav Bar Style*/
+.navbar {
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid black 2px;
+  gap: 10px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  
+
+  /*Used to align items in center in the same line*/
+}
+
+/*Logo Bar Style*/
+.logo {
+  color: #A435F0;
+}
+
+/*Logo Bar Style*/
+
+/*Search Bar Style*/
+.searchbox {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border: solid black 1px;
+  border-radius: 30px;
+  width: 60%;
+  background-color: #f9f9f9;
+  gap: 10px;
+  /* Adds spacing between icon and input */
+}
+
+.searchbox i {
+  color: black;
+  font-size: 16px;
+}
+
+.searchbox input {
+  border: none;
+  width: 100%;
+  flex-grow: 1;
+  background: transparent;
+  font-size: 16px;
+  padding: 5px 0;
+}
+
+.searchbox input:focus {
+  outline: none;
+}
+
+.searchbox input {
+  border: none;
+  width: 100%;
+}
+
+.searchbox input:focus {
+  outline: none;
+}
+
+/*Search Bar Style*/
+
+/*Purchase Bar Style*/
+.purchase {
+  display: flex;
+  gap: 20px;
+}
+
+.mylearning{
+  position: relative;
+  cursor: pointer;
+}
+.purchased-courses{
+  position: absolute;
+  background-color: white;
+  border: solid black 2px;
+  width: 100%;
+  top: 150%;
+  padding-left: 20px;
+  padding-right: 20px;
+  right: 0;
+  display: none;
+}
+.mylearning:hover .purchased-courses{
+  display:block;
+
+}
+
+/*Purchase Bar Style*/
+
+
+/*Overall all Nav Bar Style*/
+
+/*Categories Bar Style*/
+.categories {
+  display: flex;
+  padding: 10px;
+  border-bottom: solid black 1px;
+  justify-content: space-between;
+}
+
+.categories p {
+  background-color: #A435F0;
+  color: white;
+  padding: 10px;
+  border-radius: 100px;
+  border: solid black 1px;
+}
+
+.categories p:hover{
+  background-color: transparent;
+  color: #A435F0;
+  padding: 10px;
+  border-radius: 100px;
+  transition: 1s;
+  cursor: pointer;
+  border: solid #A435F0 1px;
+
+}
+
+/*Categories Bar Style*/
+
+/*Advertisment Image Style*/
+
+.sale-image{
+  position: relative;
+}
+
+.sale-image img {
+  width: 100%;
+}
+
+.offer {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  width: 25%;
+  padding: 25px;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  animation-name: flash;
+  animation-duration: 2s;
+  opacity: 0;
+  animation-fill-mode: forwards;/*Ithu use panna animation first iruntha form ku pogathu*/
+}
+
+@keyframes flash {
+  0%{
+    transform: scale(0);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+}
+
+/*Advertisment Image Style*/
+
+/*Recommended Bar Style*/
+
+.Recommended {
+  padding: 5px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  flex-grow: 1;
+  flex-basis: 20%;
+  margin: 5px;
+}
+
+
+.course-card img {
+  width: 100%;
+  height: 50%;
+}
+
+/*Recommended Bar Style*/
+
+/*Topics Bar Style*/
+
+.topics {
+  padding: 10px;
+}
+
+.topics-container {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.topics-container p {
+  border: solid gray 5px;
+  padding: 2px;
+  flex-grow: 1;
+  flex-basis: 25%;
+  margin: 5px;
+}
+
+.topics-container p:hover{
+  background-color: khaki;
+  cursor: pointer;
+  border: solid gray 5px;
+  text-align: center;
+  padding: 2px;
+  flex-grow: 1;
+  flex-basis: 25%;
+  margin: 5px;
+}
+
+.popular {
+  padding: 10px;
+}
+
+.courses {
+  display: flex;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+/*Topics Bar Style*/
+
+/*Footer Bar Style*/
+
+.footer {
+  background-color: black;
+  color: white;
+}
+
+.Reference {
+  display: flex;
+  padding: 10px;
+  gap: 20px;
+}
+
+.row1 p {
+  margin: 20px;
+}
+
+.row2 p {
+  margin: 20px;
+}
+
+.rights {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Footer Bar Style*/
+
+/*Media Queries*/
+
+@media screen and (max-width:800px) {
+  body{
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .course-card {
+    flex-grow: 1;
+    flex-basis: 40%;
+    margin: 5px;
+    font-size: 10px;
+  }
+  .categories{
+    display: none;
+  }
+  .purchase{
+    display: none;
+  }
+  .searchbox{
+    display: none;
+  }
+}
